@@ -1,0 +1,175 @@
+// Custom.scss
+// Option A: Include all of Bootstrap
+
+// Include any default variable overrides here (though functions won't be available)
+
+@import "../../node_modules/bootstrap/scss/bootstrap";
+
+// Then add additional custom code here
+body {
+    margin-top: 40px;
+    /* This margin just makes the text easier to read. You can remove it if you want since it can mess with your other styles. */
+}
+
+body::before {
+    content: "XS";
+    color: red;
+    font-size: 2rem;
+    font-weight: bold;
+    position: fixed;
+    top: 0;
+    right: 0;
+}
+
+/* This box class is purely used for explaining how the bootstrap grid system works. */
+.box {
+    background-color: lightblue;
+    border: 1px solid blue;
+    min-height: 50px;
+    font-size: 2rem;
+}
+
+@media (min-width: 576px) {
+    body::before {
+        content: "SM";
+    }
+}
+
+@media (min-width: 768px) {
+    body::before {
+        content: "MD";
+    }
+
+    #header-slogan {
+        text-align: left;
+    }
+}
+
+@media (min-width: 992px) {
+    body::before {
+        content: "LG";
+    }
+}
+
+@media (min-width: 1200px) {
+    body::before {
+        content: "XL";
+    }
+}
+
+@media (min-width: 1400px) {
+    body::before {
+        content: "XXL";
+    }
+}
+
+#header-slogan {
+    padding-left: 50px;
+}
+
+#header-description {
+    padding-left: 50px;
+}
+
+#header-button {
+    margin-left: 50px;
+}
+
+#header-image {
+    width: 390px;
+    height: 450px;
+}
+
+@media (max-width: 767.98px) {
+    #header-slogan {
+        text-align: center;
+        padding-left: 0px;
+    }
+
+    #header-description {
+        text-align: center;
+        padding-left: 0px;
+    }
+
+    #header-button {
+        margin-left: auto !important;
+        margin-right: auto !important;
+        margin-left: 0px;
+    }
+}
+
+.service-img {
+    height: 100%;
+    width: 100%;
+}
+
+footer {
+    margin-top: 50px;
+}
+
+main {
+    margin-top: 50px;
+}
+
+.font-optima {
+    font-family: Didot;
+}
+
+.carousel-inner {
+    padding: 1em;
+}
+
+.card {
+    margin: 0 0.5em;
+    box-shadow: 2px 6px 8px 0 rgba(22, 22, 26, 0.18);
+    border: none;
+    height: 200px;
+}
+
+.carousel-control-prev,
+.carousel-control-next {
+    background-color: #e1e1e1;
+    width: 6vh;
+    height: 6vh;
+    border-radius: 50%;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+@media (min-width: 768px) {
+    .carousel-item {
+        margin-right: 0;
+        flex: 0 0 33.333333%;
+        display: block;
+    }
+
+    .carousel-inner {
+        display: flex;
+    }
+}
+
+.card .img-wrapper {
+    max-width: 100%;
+    height: 13em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.card img {
+    max-height: 100%;
+}
+
+@media (max-width: 767px) {
+    .card .img-wrapper {
+        height: 17em;
+    }
+}
+
+#reviews-section {
+    margin-top: 50px;
+}
+
+#services-section a {
+    width: 200px;
+}
